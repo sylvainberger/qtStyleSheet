@@ -1,0 +1,26 @@
+<RCC>
+  <qresource>
+    <file alias="arrow_down.png">images/arrow_down.png</file>
+    <file alias="arrow_down2.png">images/arrow_down2.png</file>
+    <file alias="arrow_left.png">images/arrow_left.png</file>
+    <file alias="arrow_right.png">images/arrow_right.png</file>
+    <file alias="arrow_up.png">images/arrow_up.png</file>
+    <file alias="arrow_up2.png">images/arrow_up2.png</file>
+    <file alias="checkbox_checked.png">images/checkbox_checked.png</file>
+    <file alias="checkbox_checked_hover.png">images/checkbox_checked_hover.png</file>
+    <file alias="checkbox_checked_pressed.png">images/checkbox_checked_pressed.png</file>
+    <file alias="checkbox_unchecked.png">images/checkbox_unchecked.png</file>
+    <file alias="checkbox_unchecked_hover.png">images/checkbox_unchecked_hover.png</file>
+    <file alias="checkbox_unchecked_pressed.png">images/checkbox_unchecked_pressed.png</file>
+    <file alias="down_arrow.png">images/down_arrow.png</file>
+    <file alias="grip_horizontal.png">images/grip_horizontal.png</file>
+    <file alias="grip_vertical.png">images/grip_vertical.png</file>
+    <file alias="radiobutton_checked.png">images/radiobutton_checked.png</file>
+    <file alias="radiobutton_checked_hover.png">images/radiobutton_checked_hover.png</file>
+    <file alias="radiobutton_checked_pressed.png">images/radiobutton_checked_pressed.png</file>
+    <file alias="radiobutton_unchecked.png">images/radiobutton_unchecked.png</file>
+    <file alias="radiobutton_unchecked_hover.png">images/radiobutton_unchecked_hover.png</file>
+    <file alias="radiobutton_unchecked_pressed.png">images/radiobutton_unchecked_pressed.png</file>
+    <file alias="sizegrip.png">images/sizegrip.png</file>
+  </qresource>
+</RCC>

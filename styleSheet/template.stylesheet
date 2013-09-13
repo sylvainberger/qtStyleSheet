@@ -1,0 +1,161 @@
+/* ok */
+/* The tooltip bg and text color when hovering the mouse over a widget with tooltips */
+QToolTip
+{
+    background-color: ${TOOLTIP_BACKGROUND_COLOR};
+    border: 1px solid ${BORDER_COLOR};
+    padding: 1px;
+    border-radius: 0px;
+}
+
+/* ok */
+/* The bg and text of most of the widgets */
+QWidget
+{
+    color: ${MAIN_TEXT_COLOR};
+    font-size: ${MAIN_TEXT_SIZE}px;
+    font-family: "${MAIN_TEXT_FONT}";
+    background-color: ${WIDGET_BACKGROUND_COLOR};
+}
+
+/* ok */
+/* A disbled widget, List views answer to that css */
+QWidget:disabled
+{
+    color: ${MAIN_DISABLED_TEXT_COLOR};
+    background-color: ${WIDGET_DISABLED_BACKGROUND_COLOR};
+}
+
+/* ok */
+/* When overing the mouse on an item of a list view, table view, tree view */
+QWidget:item:hover
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${ITEM_HOVER_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${ITEM_HOVER_BACKGROUND_COLOR});
+    color: ${ITEM_HOVER_TEXT_COLOR};
+}
+
+/* ok */
+/* When selecting an item of a list view, table view, tree view */
+QWidget:item:selected
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${ITEM_SELECTED_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${ITEM_SELECTED_BACKGROUND_COLOR});
+    color: ${ITEM_SELECTED_TEXT_COLOR};
+}
+
+/* TEST ON WINDOWS */
+QMenuBar::item
+{
+    background: transparent;
+}
+/* TEST ON WINDOWS */
+QMenuBar::item:selected
+{
+    background: transparent;
+    border: 1px solid #000000;
+}
+/* TEST ON WINDOWS */
+QMenuBar::item:pressed
+{
+    background: #444;
+    border: 1px solid #000;
+    background-color: QLinearGradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:1 #212121,
+        stop:0.4 #343434/*,
+        stop:0.2 #343434,
+        stop:0.1 #ffaa00*/
+    );
+    margin-bottom:-1px;
+    padding-bottom:1px;
+}
+/* TEST ON WINDOWS */
+QMenu
+{
+    background: ${MENU_BACKGROUND_COLOR};
+    border: 1px solid ${BORDER_COLOR};
+}
+
+/* ok */
+/* The BG and text of the items of a menu */
+QMenu::item
+{
+    padding: 2px 20px 2px 20px;
+    background-color: ${MENU_BACKGROUND_COLOR};
+    color: ${MENU_TEXT_COLOR};
+}
+
+/* ok */
+/* The BG and text of the items of a menu when hovering the mouse on them */
+QMenu::item:selected
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${MENU_HOVER_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${MENU_HOVER_BACKGROUND_COLOR});
+    color: ${MENU_HOVER_TEXT_COLOR};
+}
+
+/* The BG color and the unselected text of the list view, table view and treeView */
+QAbstractItemView
+{
+    margin: 2 px;
+    padding: 0 px;
+    border: 1 px solid ${BORDER_COLOR};
+    background-color: ${LIST_BACKGROUND_COLOR};
+    color: ${MAIN_TEXT_COLOR}
+}
+
+/* The border of the selected view */
+/* BUG, still show a blue border */
+QAbstractItemView:focus
+{
+    margin: 2 px;
+    padding: 0 px;
+    border: 1 px solid ${BORDER_SELECTED_COLOR};
+}
+
+/* ok */
+/* When a widget is in focus */
+QWidget:focus
+{
+    border: 2px solid ${BORDER_SELECTED_COLOR};
+}
+
+/* ok */
+/* LineEdit widget */
+QLineEdit
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${FIELD_BACKGROUND_COLOR}, stop: 1 ${_OFF_WHITE_}${FIELD_BACKGROUND_COLOR});
+    color: ${FIELD_TEXT_COLOR};
+    padding: 1px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: ${BORDER_COLOR};
+    border-radius: 4px;
+
+}
+
+/* TODO: confirm this */
+/* for password mode lineEdit */
+QLineEdit[echoMode="2"] {
+    lineedit-password-character: 9679;
+}
+
+/* ok */
+/* When editing a lineEdit */
+QLineEdit:focus
+{
+    background-color: ${FIELD_SELECTED_BACKGROUND_COLOR};
+    color: ${FIELD_TEXT_COLOR};
+    selection-background-color: ${FIELD_SELECTED_TEXT_BACKGROUND_COLOR};
+    selection-color: ${FIELD_SELECTED_TEXT_COLOR};
+}
+
+/* ok */
+/* Read-only line edit BG and text color */
+QLineEdit:read-only
+{
+    background-color: ${FIELD_DISABLED_BACKGROUND_COLOR};
+    color: ${FIELD_DISABLED_TEXT_COLOR};
+    selection-background-color: ${FIELD_SELECTED_TEXT_BACKGROUND_COLOR};
+    selection-color: ${FIELD_SELECTED_TEXT_COLOR};
+}
+
