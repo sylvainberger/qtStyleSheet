@@ -36,3 +36,6 @@ nosetests.xml
 
 # specific project files
 __sandbox.py
+_examples
+styleSheet/images/_obsolete
+styleSheet/images/sources
