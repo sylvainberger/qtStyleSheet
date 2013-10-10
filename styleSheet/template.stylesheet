@@ -30,7 +30,7 @@ QWidget:disabled
 /* When overing the mouse on an item of a list view, table view, tree view */
 QWidget:item:hover
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${ITEM_HOVER_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${ITEM_HOVER_BACKGROUND_COLOR});
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${ITEM_HOVER_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${ITEM_HOVER_BACKGROUND_COLOR});
     color: ${ITEM_HOVER_TEXT_COLOR};
 }
 
@@ -38,7 +38,7 @@ QWidget:item:hover
 /* When selecting an item of a list view, table view, tree view */
 QWidget:item:selected
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${ITEM_SELECTED_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${ITEM_SELECTED_BACKGROUND_COLOR});
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${ITEM_SELECTED_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${ITEM_SELECTED_BACKGROUND_COLOR});
     color: ${ITEM_SELECTED_TEXT_COLOR};
 }
 
@@ -89,7 +89,7 @@ QMenu::item
 /* The BG and text of the items of a menu when hovering the mouse on them */
 QMenu::item:selected
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${MENU_HOVER_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${MENU_HOVER_BACKGROUND_COLOR});
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${MENU_HOVER_BACKGROUND_COLOR}, stop: 1 ${_LIGHT_GREY_}${MENU_HOVER_BACKGROUND_COLOR});
     color: ${MENU_HOVER_TEXT_COLOR};
 }
 
@@ -123,7 +123,7 @@ QWidget:focus
 /* LineEdit widget */
 QLineEdit
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${FIELD_BACKGROUND_COLOR}, stop: 1 ${_OFF_WHITE_}${FIELD_BACKGROUND_COLOR});
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${FIELD_BACKGROUND_COLOR}, stop: 1 ${_OFF_WHITE_}${FIELD_BACKGROUND_COLOR});
     color: ${FIELD_TEXT_COLOR};
     padding: 1px;
     border-style: solid;
@@ -159,3 +159,99 @@ QLineEdit:read-only
     selection-color: ${FIELD_SELECTED_TEXT_COLOR};
 }
 
+/* ok for all button */
+/* Push button */
+QPushButton
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_COLOR}, stop: 0.1 ${BUTTON_COLOR}, stop: 0.8 ${BUTTON_COLOR}, stop: 1 ${_LIGHT_GREY_}${BUTTON_COLOR});
+    color: ${BUTTON_TEXT_COLOR};
+    border-width: 1px;
+    border-color: ${BUTTON_BORDER_COLOR};
+    border-style: solid;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: ${BUTTON_TEXT_SIZE}px;
+    font-family: "${BUTTON_TEXT_FONT}";
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+QPushButton:flat {
+    background-color: ${BUTTON_COLOR};
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:hover
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_HOVER_COLOR}, stop: 0.1 ${BUTTON_HOVER_COLOR}, stop: 0.8 ${BUTTON_HOVER_COLOR}, stop: 1 ${_LIGHT_GREY_}${BUTTON_HOVER_COLOR});
+}
+
+/* make the default button prominent */
+QPushButton:default {
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${BUTTON_DEFAULT_COLOR}, stop: 0.1 ${_WHITE_}${BUTTON_DEFAULT_COLOR}, stop: 0.8 ${_WHITE_}${BUTTON_DEFAULT_COLOR}, stop: 1 ${_LIGHT_GREY_}${BUTTON_DEFAULT_COLOR});
+    border-color: ${BUTTON_DEFAULT_BORDER_COLOR};
+    border-width: 1px;
+}
+
+QPushButton:default:hover {
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_WHITE_}${BUTTON_HOVER_COLOR}, stop: 0.1 ${_WHITE_}${BUTTON_HOVER_COLOR}, stop: 0.8 ${_WHITE_}${BUTTON_HOVER_COLOR}, stop: 1 ${_LIGHT_GREY_}${BUTTON_HOVER_COLOR});
+}
+
+QPushButton:default:pressed {
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_LIGHT_GREY_}${BUTTON_PRESSED_COLOR}, stop: 0.2 ${BUTTON_PRESSED_COLOR}, stop: 0.9 ${BUTTON_PRESSED_COLOR}, stop: 1 ${BUTTON_PRESSED_COLOR});
+    color: ${_MID_GREY_}${BUTTON_COLOR}
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${_LIGHT_GREY_}${BUTTON_PRESSED_COLOR}, stop: 0.2 ${BUTTON_PRESSED_COLOR}, stop: 0.9 ${BUTTON_PRESSED_COLOR}, stop: 1 ${BUTTON_PRESSED_COLOR});
+    color: ${_MID_GREY_}${BUTTON_COLOR}
+}
+
+/* Combo box */
+QComboBox
+{
+    selection-background-color: ${FIELD_BACKGROUND_COLOR};
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${FIELD_BACKGROUND_COLOR}, stop: 0.1 ${FIELD_BACKGROUND_COLOR}, stop: 0.9 ${FIELD_BACKGROUND_COLOR}, stop: 1 ${FIELD_BACKGROUND_COLOR});
+    border-style: solid;
+    border: 1px solid ${BORDER_COLOR};
+    border-radius: 4;
+}
+
+QComboBox:hover
+{
+    background-color: ${_GREEN_}
+    border: 2px solid ${BORDER_COLOR};
+}
+
+QComboBox:on
+{
+    padding-top: 3px;
+    padding-left: 4px;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_PRESSED_COLOR}, stop: 0.1 ${BUTTON_PRESSED_COLOR}, stop: 0.9 ${BUTTON_PRESSED_COLOR}, stop: 1 ${BUTTON_PRESSED_COLOR});
+}
+
+QComboBox QAbstractItemView
+{
+    border: 2px solid ${_RED_};
+    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_COLOR}, stop: 1 ${BUTTON_COLOR});
+}
+
+QComboBox::drop-down
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 0px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+ }
+
+QComboBox::down-arrow
+{
+    image: url(:/down_arrow.png);
+    width: 11px;
+}

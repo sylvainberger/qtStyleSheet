@@ -1,71 +1,13 @@
 
-QPushButton
-{
-    color: #b1b1b1;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_COLOR_0}, stop: 0.1 ${BUTTON_COLOR_1}, stop: 0.9 ${BUTTON_COLOR_2}, stop: 1 ${BUTTON_COLOR_3});
-    border-width: 1px;
-    border-color: ${BORDER_COLOR};
-    border-style: solid;
-    border-radius: 5px;
-    padding: 3px;
-    font-size: ${BUTTON_SIZE}px;
-    font-family: "${BUTTON_FONT}";
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_PRESS_COLOR_0}, stop: 0.1 ${BUTTON_PRESS_COLOR_0}, stop: 0.5 ${BUTTON_PRESS_COLOR_1}, stop: 0.9 ${BUTTON_PRESS_COLOR_2}, stop: 1 ${BUTTON_PRESS_COLOR_3});
-}
 
 
-QComboBox
-{
-    selection-background-color: ${BUTTON_PRESS_COLOR_0};
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_COLOR_0}, stop: 0.1 ${BUTTON_COLOR_1}, stop: 0.9 ${BUTTON_COLOR_2}, stop: 1 ${BUTTON_COLOR_3});
-    border-style: solid;
-    border: 1px solid ${BORDER_COLOR};
-    border-radius: 4;
-}
-
-QComboBox:hover,QPushButton:hover
-{
-    border: 2px solid ${LIGHT_COLOR_BORDER};
-}
 
 
-QComboBox:on
-{
-    padding-top: 3px;
-    padding-left: 4px;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_PRESS_COLOR_0}, stop: 0.1 ${BUTTON_PRESS_COLOR_1}, stop: 0.9 ${BUTTON_PRESS_COLOR_2}, stop: 1 ${BUTTON_PRESS_COLOR_3});
-}
 
-QComboBox QAbstractItemView
-{
-    border: 2px solid ${LIGHT_COLOR_BORDER};
-    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 ${BUTTON_COLOR_0}, stop: 1 ${BUTTON_COLOR_1});
-}
 
-QComboBox::drop-down
-{
-    subcontrol-origin: padding;
-    subcontrol-position: top right;
-    width: 15px;
 
-    border-left-width: 0px;
-    border-left-color: darkgray;
-    border-left-style: solid; /* just a single line */
-    border-top-right-radius: 3px; /* same radius as the QComboBox */
-    border-bottom-right-radius: 3px;
- }
 
-QComboBox::down-arrow
-{
-    image: url(ICON_PATH/arrow_down.png);
-    width: 11px;
-}
+
 
 QGroupBox:focus
 {
@@ -366,3 +308,22 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
 {
     border: 1px solid #444;
 }
+
+
+/* TO DO:
+ QPushButton:open { /* when the button has its menu open */
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton::menu-indicator {
+     image: url(menu_indicator.png);
+     subcontrol-origin: padding;
+     subcontrol-position: bottom right;
+ }
+
+ QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
+     position: relative;
+     top: 2px; left: 2px; /* shift the arrow by 2 px */
+ }
+ */

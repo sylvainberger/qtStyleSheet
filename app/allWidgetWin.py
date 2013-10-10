@@ -32,6 +32,7 @@ def main():
     """ Create the window parented to another main window or make it standalone """
     app = QtGui.QApplication([])
 
+    app.setStyle('Plastique')
     win = MainWindow()
     win.resize(350,500)
     win.show()
