@@ -14,7 +14,7 @@ QWidget
     font-size: ${MAIN_TEXT_SIZE}px;
     font-family: "${MAIN_TEXT_FONT}";
     background-color: ${WIDGET_BACKGROUND_COLOR};
-    border: 1px solid ${WIDGET_BORDER_COLOR};
+    /*border: 1px solid ${WIDGET_BORDER_COLOR};*/
     padding: 0px;
     margin: 0px;
 
@@ -664,7 +664,7 @@ QTabBar::tab {
 
 /* The widget border of the tab widget */
 QTabWidget::pane {
-    border: 0px solid ${BORDER_COLOR};
+    border: 1px solid ${BORDER_COLOR};
     top: 0px;
 }
 

@@ -36,7 +36,7 @@ import re
 from math import ceil
 from string import Template
 from jsonDict import JsonDict
-import styleSheet.icons
+import stylesheet.icons
 
 STYLESHEET_FILE = os.path.join(os.path.dirname(__file__), 'styleSheet', 'template.stylesheet')
 REGEX = re.compile("(#([abcdef0123456789]{1,6})#([abcdef0123456789]{1,6}))")
