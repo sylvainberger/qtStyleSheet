@@ -1,0 +1,87 @@
+
+
+/* regular checkbox */
+QCheckBox
+{
+    background-color: ${WIDGET_BACKGROUND_COLOR};
+    border: none;
+    color: ${BUTTON_TEXT_COLOR};
+    font-size: ${BUTTON_TEXT_SIZE}px;
+    font-family: "${BUTTON_TEXT_FONT}";
+    spacing: 10px;
+}
+
+/* remove border on focus */
+QCheckBox::focus
+{
+    border: none;
+}
+
+/* disabled checkbox */
+QCheckBox:disabled
+{
+    color: ${MAIN_DISABLED_TEXT_COLOR};
+    background-color: ${WIDGET_BACKGROUND_COLOR};
+}
+
+QCheckBox::indicator
+{
+    color: ${_BLUE_};
+    background-color: ${ITEM_BACKGROUND_COLOR};
+    border: 2px solid ${ITEM_BACKGROUND_COLOR};
+    border-radius: 0px;
+    width: 10px;
+    height: 10px;
+}
+
+
+
+
+QScrollBar:vertical
+{
+      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
+      width: 7px;
+      margin: 16px 0 16px 0;
+      border: 1px solid #222222;
+}
+
+QScrollBar::handle:vertical
+{
+      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 0.5 #d7801a, stop: 1 #ffa02f);
+      min-height: 20px;
+      border-radius: 2px;
+}
+
+QScrollBar::add-line:vertical
+{
+      border: 1px solid #1b1b19;
+      border-radius: 2px;
+      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+      height: 14px;
+      subcontrol-position: bottom;
+      subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical
+{
+      border: 1px solid #1b1b19;
+      border-radius: 2px;
+      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d7801a, stop: 1 #ffa02f);
+      height: 14px;
+      subcontrol-position: top;
+      subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
+{
+      border: 1px solid black;
+      width: 1px;
+      height: 1px;
+      background: white;
+}
+
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+      background: none;
+}
