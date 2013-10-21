@@ -1,32 +1,9 @@
 """
 Json dictionary class.
 Use this to simplify the loading, saving of json data
-
-The MIT License (MIT)
-
-Copyright (c) 2013 Sylvain Berger
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
 """
 __author__ = "Sylvain Berger"
 __email__ = "sylvain.berger@gmail.com"
-__copyright__ = "Sylvain Berger"
 __version__ = "1.0.0"
 __status__ = "Production"
 
@@ -37,12 +14,8 @@ class JsonDict(dict):
     """ Dictionary that can load, save and perform different thing on json data """
     filename = None
 
-    def __init__(self, filename=None, autoLoad=True):
+    def __init__(self):
         super(JsonDict, self).__init__()
-        if filename:
-            self.filename = filename
-        if autoLoad and self.filename:
-            self.load()
 
     @classmethod
     def fromFile(cls, filename):
@@ -64,9 +37,9 @@ class JsonDict(dict):
             self.filename = filename
         if not self.filename or not os.path.exists(self.filename):
             return
-        f = open(self.filename, 'r')
-        _json = json.load(f)
-        self.update(_json)
+        with open(self.filename, 'r') as f:
+            _json = json.load(f)
+            self.update(_json)
         return self.filename
 
     def save(self, filename=None):
@@ -75,8 +48,8 @@ class JsonDict(dict):
             self.filename = filename
         if not self.filename:
             return
-        f = open(self.filename, 'w')
-        json.dump(self, f, indent=4, sort_keys=True)
+        with open(self.filename, 'w') as f:
+            json.dump(self, f, indent=4, sort_keys=True)
         return self.filename
 
     def loads(self, jsonString):
@@ -92,3 +65,8 @@ class JsonDict(dict):
         """ Return a json string of the data """
         return self.dumps(**kwargs)
 
+if __name__ == '__main__':
+    # run the unittests
+    import unittest
+    from hybride.unittests.jsonDict_unittest import *
+    unittest.main()
