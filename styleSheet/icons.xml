@@ -22,5 +22,9 @@
     <file alias="radiobutton_unchecked_hover.png">images/radiobutton_unchecked_hover.png</file>
     <file alias="radiobutton_unchecked_pressed.png">images/radiobutton_unchecked_pressed.png</file>
     <file alias="sizegrip.png">images/sizegrip.png</file>
+    <file alias="softimage_checkbox_checked.png">images/softimage_checkbox_checked.png</file>
+    <file alias="softimage_checkbox_checked_hover.png">images/softimage_checkbox_checked_hover.png</file>
+    <file alias="softimage_checkbox_unchecked.png">images/softimage_checkbox_unchecked.png</file>
+    <file alias="softimage_checkbox_unchecked_hover.png">images/softimage_checkbox_unchecked_hover.png</file>
   </qresource>
 </RCC>

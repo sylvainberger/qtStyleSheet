@@ -106,14 +106,15 @@ QMenu::separator
 QMenu::item
 {
     color: ${MAIN_TEXT_COLOR};
-    background-color: ${ITEM_BACKGROUND_COLOR};
+    background-color: ${MENU_BACKGROUND_COLOR};
     padding: 2px 20px 2px 20px;
 }
 
-/* not sure what it does */
+/* Control the look of item when hovering the mouse in the menu list */
 QMenu::item:selected
 {
-    color: #000000;
+    color: ${MENU_HOVER_TEXT_COLOR};
+    background-color: ${MENU_HOVER_BACKGROUND_COLOR};
 }
 
 /* Control the color of the portion of the menus and list that don't have items */
@@ -137,7 +138,7 @@ QLineEdit
     padding: 1px;
     border-style: solid;
     border: 1px solid ${BORDER_COLOR};
-    border-radius: 5;
+    border-radius: 5px;
 }
 
 /* for password mode lineEdit */
@@ -259,21 +260,22 @@ QPushButton:pressed
 /* The combo box when not selected */
 QComboBox
 {
-    selection-background-color: #ffaa00;
+    color: ${COMBO_TEXT_COLOR};
+    selection-background-color: ${COMBO_HOVER_BACKGROUND_COLOR};
     background-color: QLinearGradient(
         x1: 0, y1: 0,
         x2: 0, y2: 1,
-        stop: 0 ${BUTTON_COLOR},
-        stop: 0.6 ${BUTTON_COLOR},
-        stop: 1 ${_DARK_1_}${BUTTON_COLOR}
+        stop: 0 ${COMBO_BACKGROUND_COLOR},
+        stop: 0.6 ${COMBO_BACKGROUND_COLOR},
+        stop: 1 ${_DARK_1_}${COMBO_BACKGROUND_COLOR}
     );
     border-width: 1px;
-    border-color: ${BUTTON_BORDER_COLOR};
+    border-color: ${COMBO_BORDER_COLOR};
     border-style: solid;
     border-radius: 5px;
     padding: 1px;
-    font-size: ${MENU_TEXT_SIZE}px;
-    font-family: "${MAIN_TEXT_FONT}";
+    font-size: ${COMBO_TEXT_SIZE}px;
+    font-family: "${COMBO_TEXT_FONT}";
     padding-left: 3px;
     padding-right: 3px;
 }
@@ -294,27 +296,29 @@ QComboBox:hover,QPushButton:hover
     padding-right: 2px;
 }
 
-/* for seletable items in combos */
+/* for selected combo. Not the list items, the text in the actual combo box */
 QComboBox:on
 {
+    color: ${BUTTON_TEXT_COLOR};
     padding-top: 3px;
     padding-left: 4px;
     background-color: QLinearGradient(
         x1: 0, y1: 0,
         x2: 0, y2: 1,
-        stop: 0 ${ITEM_SELECTED_BACKGROUND_COLOR},
-        stop: 0.6 ${ITEM_SELECTED_BACKGROUND_COLOR},
-        stop: 1 ${_DARK_1_}${ITEM_SELECTED_BACKGROUND_COLOR}
+        stop: 0 ${COMBO_HOVER_BACKGROUND_COLOR},
+        stop: 0.6 ${COMBO_HOVER_BACKGROUND_COLOR},
+        stop: 1 ${_DARK_1_}${COMBO_HOVER_BACKGROUND_COLOR}
     );
-    selection-background-color: ${ITEM_SELECTED_BACKGROUND_COLOR};
+    selection-background-color: ${COMBO_HOVER_BACKGROUND_COLOR};
 }
 
-/* Control the look of the menu items in the combo box */
-/* Control the color of the Model views (list, tree and table) */
-QComboBox, QAbstractItemView
+/* Control the color of the Model views (list, tree, table and also the combo list) */
+QAbstractItemView
 {
+    color: ${ITEM_TEXT_COLOR};
     background-color: ${ITEM_BACKGROUND_COLOR};
     border: 1px solid ${BORDER_COLOR};
+    selection-color: ${ITEM_SELECTED_TEXT_COLOR};
     selection-background-color: QLinearGradient(
         x1: 0, y1: 0,
         x2: 0, y2: 1,
@@ -322,7 +326,22 @@ QComboBox, QAbstractItemView
         stop: 0.6 ${ITEM_SELECTED_BACKGROUND_COLOR},
         stop: 1 ${_DARK_1_}${ITEM_SELECTED_BACKGROUND_COLOR}
     );
-    color: ${MAIN_TEXT_COLOR};
+
+}
+
+/* Control the color of the combo list */
+QComboBox QAbstractItemView
+{
+    color: ${COMBO_LIST_TEXT_COLOR};
+    background-color: ${COMBO_LIST_BACKGROUND_COLOR};
+    border: 1px solid ${COMBO_BORDER_COLOR};
+    selection-background-color: QLinearGradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 ${COMBO_HOVER_BACKGROUND_COLOR},
+        stop: 0.6 ${COMBO_HOVER_BACKGROUND_COLOR},
+        stop: 1 ${_DARK_1_}${COMBO_HOVER_BACKGROUND_COLOR}
+    );
 
 }
 
@@ -493,6 +512,7 @@ QTextEdit, QListView
     color: ${TEXT_EDIT_TEXT_COLOR};
     font-size: ${TEXT_EDIT_TEXT_SIZE}px;
     font-family: "${TEXT_EDIT_TEXT_FONT}";
+    border-radius: 4px;
 }
 
 /* when editing a text edit box */
@@ -518,6 +538,7 @@ QPlainTextEdit
     color: ${TEXT_EDIT_TEXT_COLOR};
     font-size: ${TEXT_EDIT_TEXT_SIZE}px;
     font-family: "${TEXT_EDIT_TEXT_FONT}";
+    border-radius: 4px;
 }
 
 /* when editing a text edit box */
@@ -664,7 +685,7 @@ QTabBar::tab {
 
 /* The widget border of the tab widget */
 QTabWidget::pane {
-    border: 1px solid ${BORDER_COLOR};
+    border: 0px solid ${BORDER_COLOR};
     top: 0px;
 }
 
@@ -720,7 +741,7 @@ QCheckBox
 {
     background-color: ${WIDGET_BACKGROUND_COLOR};
     border: none;
-    color: ${BUTTON_TEXT_COLOR};
+    color: ${MAIN_TEXT_COLOR};
     font-size: ${BUTTON_TEXT_SIZE}px;
     font-family: "${BUTTON_TEXT_FONT}";
     spacing: 10px;
@@ -747,7 +768,7 @@ QCheckBox::indicator
 }
 
 QCheckBox::indicator:unchecked {
-    image: url(:/checkbox_unchecked_hover.png);
+    image: url(:/checkbox_unchecked.png);
 }
 QCheckBox::indicator:unchecked:hover {
     image: url(:/checkbox_unchecked_hover.png);
@@ -756,7 +777,7 @@ QCheckBox::indicator:unchecked:pressed {
     image: url(:/checkbox_unchecked_pressed.png);
 }
 QCheckBox::indicator:checked {
-    image: url(:/checkbox_checked_hover.png);
+    image: url(:/checkbox_checked.png);
 }
 QCheckBox::indicator:checked:hover {
     image: url(:/checkbox_checked_hover.png);
