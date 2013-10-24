@@ -30,8 +30,8 @@ QWidget:focus
 /* A disabled widget, List views answer to that css */
 QWidget:disabled
 {
-    color: ${MAIN_DISABLED_TEXT_COLOR};
-    background-color: ${WIDGET_DISABLED_BACKGROUND_COLOR};
+    color: ${ITEM_DISABLED_TEXT_COLOR};
+    background-color: ${ITEM_BACKGROUND_COLOR};
 }
 
 /* When overing the mouse on an item of a list view, table view, tree view */
@@ -117,12 +117,6 @@ QMenu::item:selected
     background-color: ${MENU_HOVER_BACKGROUND_COLOR};
 }
 
-/* Control the color of the portion of the menus and list that don't have items */
-QWidget:disabled
-{
-    color: ${ITEM_DISABLED_TEXT_COLOR};
-    background-color: ${ITEM_BACKGROUND_COLOR};
-}
 
 /* Control the line edits */
 QLineEdit
@@ -138,7 +132,7 @@ QLineEdit
     padding: 1px;
     border-style: solid;
     border: 1px solid ${BORDER_COLOR};
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 /* for password mode lineEdit */
@@ -163,6 +157,14 @@ QLineEdit:focus
 
 /* Read-only line edit BG and text color */
 QLineEdit:read-only
+{
+    background-color: ${FIELD_DISABLED_BACKGROUND_COLOR};
+    color: ${FIELD_DISABLED_TEXT_COLOR};
+    selection-background-color: ${FIELD_SELECTED_TEXT_BACKGROUND_COLOR};
+    selection-color: ${FIELD_SELECTED_TEXT_COLOR};
+}
+
+QLineEdit:disabled
 {
     background-color: ${FIELD_DISABLED_BACKGROUND_COLOR};
     color: ${FIELD_DISABLED_TEXT_COLOR};
@@ -272,7 +274,7 @@ QComboBox
     border-width: 1px;
     border-color: ${COMBO_BORDER_COLOR};
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 7px;
     padding: 1px;
     font-size: ${COMBO_TEXT_SIZE}px;
     font-family: "${COMBO_TEXT_FONT}";
@@ -399,7 +401,7 @@ QScrollBar:horizontal {
     );
     height: 7px;
     margin: 0px 0px 0px 0px;
-    border-radius: 3px;
+    border-radius: 0px;
 }
 
 QScrollBar::handle:horizontal
@@ -457,7 +459,7 @@ QScrollBar:vertical {
     );
     width: 7px;
     margin: 0px 0px 0px 0px;
-    border-radius: 3px;
+    border-radius: 0px;
 }
 
 QScrollBar::handle:vertical
@@ -512,7 +514,7 @@ QTextEdit, QListView
     color: ${TEXT_EDIT_TEXT_COLOR};
     font-size: ${TEXT_EDIT_TEXT_SIZE}px;
     font-family: "${TEXT_EDIT_TEXT_FONT}";
-    border-radius: 4px;
+    border-radius: 1px;
 }
 
 /* when editing a text edit box */
@@ -531,6 +533,13 @@ QTextEdit:read-only
     selection-color: ${FIELD_SELECTED_TEXT_COLOR};
 }
 
+QTextEdit:disabled
+{
+    background-color: ${FIELD_DISABLED_BACKGROUND_COLOR};
+    color: ${FIELD_DISABLED_TEXT_COLOR};
+    selection-background-color: ${FIELD_SELECTED_TEXT_BACKGROUND_COLOR};
+    selection-color: ${FIELD_SELECTED_TEXT_COLOR};
+}
 
 QPlainTextEdit
 {
@@ -538,7 +547,7 @@ QPlainTextEdit
     color: ${TEXT_EDIT_TEXT_COLOR};
     font-size: ${TEXT_EDIT_TEXT_SIZE}px;
     font-family: "${TEXT_EDIT_TEXT_FONT}";
-    border-radius: 4px;
+    border-radius: 1px;
 }
 
 /* when editing a text edit box */
@@ -550,6 +559,14 @@ QPlainTextEdit:focus
 }
 
 QPlainTextEdit:read-only
+{
+    background-color: ${FIELD_DISABLED_BACKGROUND_COLOR};
+    color: ${FIELD_DISABLED_TEXT_COLOR};
+    selection-background-color: ${FIELD_SELECTED_TEXT_BACKGROUND_COLOR};
+    selection-color: ${FIELD_SELECTED_TEXT_COLOR};
+}
+
+QPlainTextEdit:disabled
 {
     background-color: ${FIELD_DISABLED_BACKGROUND_COLOR};
     color: ${FIELD_DISABLED_TEXT_COLOR};
@@ -744,7 +761,7 @@ QCheckBox
     color: ${MAIN_TEXT_COLOR};
     font-size: ${BUTTON_TEXT_SIZE}px;
     font-family: "${BUTTON_TEXT_FONT}";
-    spacing: 10px;
+    spacing: 3px;
 }
 
 QCheckBox::focus
@@ -762,34 +779,34 @@ QCheckBox:disabled
 
 QCheckBox::indicator
 {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 0px;
 }
 
 QCheckBox::indicator:unchecked {
-    image: url(:/checkbox_unchecked.png);
+    image: url(:/${CHECKBOX_UNCHECKED});
 }
 QCheckBox::indicator:unchecked:hover {
-    image: url(:/checkbox_unchecked_hover.png);
+    image: url(:/${CHECKBOX_UNCHECKED_HOVER});
 }
 QCheckBox::indicator:unchecked:pressed {
-    image: url(:/checkbox_unchecked_pressed.png);
+    image: url(:/${CHECKBOX_UNCHECKED_PRESSED});
 }
 QCheckBox::indicator:checked {
-    image: url(:/checkbox_checked.png);
+    image: url(:/${CHECKBOX_CHECKED});
 }
 QCheckBox::indicator:checked:hover {
-    image: url(:/checkbox_checked_hover.png);
+    image: url(:/${CHECKBOX_CHECKED_HOVER});
 }
 QCheckBox::indicator:checked:pressed {
-    image: url(:/checkbox_checked_pressed.png);
+    image: url(:/${CHECKBOX_CHECKED_PRESSED});
 }
 QCheckBox::indicator:indeterminate:hover {
-    image: url(:/checkbox_indeterminate_hover.png);
+    image: url(:/${CHECKBOX_INDETERMINATE_HOVER});
 }
 QCheckBox::indicator:indeterminate:pressed {
-    image: url(:/checkbox_indeterminate_pressed.png);
+    image: url(:/${CHECKBOX_INDETERMINATE_PRESSED});
 }
 
 /* regular radio button */

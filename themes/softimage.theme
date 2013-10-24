@@ -12,15 +12,15 @@
     "_BLACK_": "#000000",
 
     "_DARK_1_": "#bfbfbf",
-    "_DARK_2_": "#323232",
+    "_DARK_2_": "#101010",
 
     "TOOLTIP_BACKGROUND_COLOR": "#bfbfbf",
 
     "MAIN_TEXT_SIZE": 11,
     "MAIN_TEXT_FONT": "Lucida Grande",
     "MAIN_TEXT_COLOR": "#101010",
-    "MAIN_DISABLED_TEXT_COLOR": "#323232",
-    "HIGHLIGHT_COLOR": "#5c4ef1",
+    "MAIN_DISABLED_TEXT_COLOR": "#cccccc",
+    "HIGHLIGHT_COLOR": "#3399ff",
 
     "BORDER_COLOR": "#1e1e1e",
     "BORDER_HOVER_COLOR": "#494949",
@@ -31,8 +31,8 @@
     "WIDGET_DISABLED_BACKGROUND_COLOR": "#505050",
     "LIST_BACKGROUND_COLOR": "#505050",
 
-    "ITEM_BACKGROUND_COLOR": "#323232",
-    "ITEM_TEXT_COLOR": "#101010",
+    "ITEM_BACKGROUND_COLOR": "#363333",
+    "ITEM_TEXT_COLOR": "#eeeeee",
     "ITEM_HOVER_BACKGROUND_COLOR": "#3399ff",
     "ITEM_HOVER_TEXT_COLOR": "#eeeeee",
     "ITEM_SELECTED_BACKGROUND_COLOR": "#3399ff",
@@ -47,33 +47,33 @@
     "MENU_TEXT_FONT": "Lucida Grande",
     "MENU_TEXT_SIZE": 11,
 
-    "FIELD_BACKGROUND_COLOR": "#323232",
+    "FIELD_BACKGROUND_COLOR": "#363333",
     "FIELD_SELECTED_BACKGROUND_COLOR": "#383838",
-    "FIELD_DISABLED_BACKGROUND_COLOR": "#323232",
+    "FIELD_DISABLED_BACKGROUND_COLOR": "#363333",
     "FIELD_TEXT_FONT": "Lucida Grande",
     "FIELD_TEXT_SIZE": 11,
     "FIELD_TEXT_COLOR": "#eeeeee",
     "FIELD_SELECTED_TEXT_BACKGROUND_COLOR": "#5c4ef1",
     "FIELD_SELECTED_TEXT_COLOR": "#eeeeee",
-    "FIELD_DISABLED_TEXT_COLOR": "#bbbbbb",
+    "FIELD_DISABLED_TEXT_COLOR": "#cccccc",
 
-    "TEXT_EDIT_BACKGROUND_COLOR": "#323232",
+    "TEXT_EDIT_BACKGROUND_COLOR": "#363333",
     "TEXT_EDIT_TEXT_COLOR": "#eeeeee",
     "TEXT_EDIT_TEXT_FONT": "Lucida Grande",
-    "TEXT_EDIT_TEXT_SIZE": 11,
+    "TEXT_EDIT_TEXT_SIZE": 12,
 
-    "BUTTON_BACKGROUND_COLOR": "#323232",
+    "BUTTON_BACKGROUND_COLOR": "#363333",
     "BUTTON_TEXT_COLOR": "#eeeeee",
     "BUTTON_TEXT_FONT": "Lucida Grande",
     "BUTTON_TEXT_SIZE": 11,
-    "BUTTON_COLOR": "#323232",
+    "BUTTON_COLOR": "#363333",
     "BUTTON_HOVER_COLOR": "#555555",
     "BUTTON_PRESSED_COLOR": "#454545",
     "BUTTON_BORDER_COLOR": "#101010",
     "BUTTON_DEFAULT_COLOR": "#707070",
     "BUTTON_DEFAULT_BORDER_COLOR": "#202020",
 
-    "COMBO_BACKGROUND_COLOR": "#323232",
+    "COMBO_BACKGROUND_COLOR": "#363333",
     "COMBO_BORDER_COLOR": "#101010",
     "COMBO_HOVER_BACKGROUND_COLOR": "#3399ff",
     "COMBO_HOVER_TEXT_COLOR": "#eeeeee",
@@ -82,8 +82,18 @@
     "COMBO_TEXT_FONT": "Lucida Grande",
     "COMBO_TEXT_SIZE": 11,
     "COMBO_LIST_TEXT_COLOR": "#eeeeee",
-    "COMBO_LIST_BACKGROUND_COLOR": "#323232",
+    "COMBO_LIST_BACKGROUND_COLOR": "#363333",
 
     "SCROLLBAR_COLOR": "#aaaaaa",
-    "SCROLLBAR_BACKGROUND_COLOR": "#323232"
+    "SCROLLBAR_BACKGROUND_COLOR": "#363333",
+
+    "CHECKBOX_CHECKED": "softimage_checkbox_checked.png",
+    "CHECKBOX_CHECKED_HOVER": "softimage_checkbox_checked_hover.png",
+    "CHECKBOX_CHECKED_PRESSED": "softimage_checkbox_checked_hover.png",
+    "CHECKBOX_UNCHECKED": "softimage_checkbox_unchecked.png",
+    "CHECKBOX_UNCHECKED_HOVER": "softimage_checkbox_unchecked_hover.png",
+    "CHECKBOX_UNCHECKED_PRESSED": "softimage_checkbox_unchecked_hover.png",
+    "CHECKBOX_INDETERMINATE": "softimage_checkbox_unchecked.png",
+    "CHECKBOX_INDETERMINATE_HOVER": "softimage_checkbox_unchecked_hover.png",
+    "CHECKBOX_INDETERMINATE_PRESSED": "softimage_checkbox_unchecked_hover.png"
 }
