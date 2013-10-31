@@ -373,8 +373,35 @@ QGroupBox
 {
     border: 1px solid ${WIDGET_BORDER_COLOR};
     border-radius: 1px;
-    padding: 6px 0px 0px 0px;
-    margin: 0px;
+    margin-top: 6px;
+}
+
+
+QGroupBox::title
+{
+    subcontrol-position: left top;
+    left: 5px;
+    bottom: 7px;
+}
+
+
+/* groupbox flat */
+QGroupBox:flat
+{
+    margin-left: 0px;
+    border-radius: 1px;
+    border-top-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-color: ${WIDGET_BORDER_COLOR};
+}
+
+QGroupBox::title:flat
+{
+    subcontrol-position: left top;
+    left: 0px;
+    bottom: 7px;
 }
 
 /* groupbox focus */
